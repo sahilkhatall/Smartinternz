@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="fullscreen-bg" style="background-image: url('https://cleantechnica.com/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-18-22.01.21-Create-a-panoramic-hyperspectral-image-of-a-natural-gas-processing-facility-showing-methane-emissions-from-flare-stacks-stationary-engines-and-tank-copy-800x445.png');">
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    </section> class="main">
+      <div class="container">
+        <h1>About Us</h1>
+        <p><strong>Information about natural gas and our prediction tool.</strong></p>
+
+        <section id="about">
+          <h2>About Natural Gas Predictor</h2>
+          <p>
+            Our Natural Gas Price Prediction website leverages advanced data analytics and machine learning techniques to forecast natural gas prices based on historical data. Our mission is to provide accurate predictions to help businesses, investors, and consumers make informed decisions.
+          </p>
+            <div class="info-box our-vision">
+              <h3>Our Vision</h3>
+              <p>
+                We aim to be the leading source of natural gas price predictions, helping to drive efficiency and profitability in the energy sector. By providing transparent and actionable insights, we empower our users to navigate the complexities of the natural gas market with confidence.
+              </p>
+            </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Natural Gas Prediction Tool. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

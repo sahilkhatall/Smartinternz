@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Inline styles can be removed if they are defined in the CSS file */
+    .fullscreen-bg {
+     "background-image: url('https://cleantechnica.com/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-18-22.01.21-Create-a-panoramic-hyperspectral-image-of-a-natural-gas-processing-facility-showing-methane-emissions-from-flare-stacks-stationary-engines-and-tank-copy-800x445.png');">
+    }
+  </style>
+</head>
+<body>
+  <div class="fullscreen-bg">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main">
+      <div class="container">
+        <section id="contact">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or need support, please reach out to us using the form below or via our contact details.</p>
+
+          <form action="submit_form_url" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="contact-details">
+            <h3>Our Contact Details</h3>
+            <p>Email: <a href="mailto:Sahilkhatal2314@gmail.com">Sahilkhatal2314@gmail.com</a></p>
+            <p>Phone: <a href="tel:+8080716827">8080716827</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Natural Gas Prediction Tool. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Natural Gas Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Inline styles for demonstration; consider moving to external CSS */
+    .fullscreen-bg {
+      "background-image: url('https://cleantechnica.com/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-18-22.01.21-Create-a-panoramic-hyperspectral-image-of-a-natural-gas-processing-facility-showing-methane-emissions-from-flare-stacks-stationary-engines-and-tank-copy-800x445.png');">
+    }
+  </style>
+</head>
+<body>
+  <!-- Site Name -->
+  <div class="site-name">Natural Gas Price Prediction</div>
+
+  <!-- Fullscreen Background -->
+  <div class="fullscreen-bg">
+
+    <!-- Header with Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="container">
+        <section>
+          <h1>Natural Gas Price Prediction</h1>
+          <h2>Welcome to our natural gas price prediction tool.</h2>
+            <h3>Unlock the Future of Natural Gas Pricing</h3>
+          <p>Stay ahead of the market with our expert predictions and analysis on natural gas prices. Whether you're an investor, trader, or industry professional, our comprehensive forecasts will help you make informed decisions.This tool provides forecasts for natural gas prices based on historical data and predictive modeling.</p>
+          <a href="{{ url_for('predict') }}" class="btn">Get Started</a>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Natural Gas Prediction Tool. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict - Natural Gas Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="fullscreen-bg" style="background-image: url('https://cleantechnica.com/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-18-22.01.21-Create-a-panoramic-hyperspectral-image-of-a-natural-gas-processing-facility-showing-methane-emissions-from-flare-stacks-stationary-engines-and-tank-copy-800x445.png');">
+        <header class="header">
+            <div class="container">
+              <nav class="navbar">
+                <ul>
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="{{ url_for('predict') }}">Predict</a></li>
+                  <li><a href="{{ url_for('about') }}">About</a></li>
+                  <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+
+            <div class="prediction-box">
+                <h1 class="title-decor">Natural Gas Price Prediction</h1>
+                <p>(Mention everything in numbers)</p>
+                <form action="/y_predict" method="POST">
+                    <input type="text" name="Year" placeholder="Year" required="required" />
+                    <input type="text" name="Month" placeholder="Month" required="required" />
+                    <input type="text" name="Day" placeholder="Day" required="required" />
+                    <button type="submit">Predict</button>
+                </form>
+                      {% if prediction_text %}
+                      <p>{{ prediction_text }}</p>
+                          {% endif %}
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Natural Gas Prediction Tool. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
